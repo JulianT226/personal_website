@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <title>Julian Tapia</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Roboto", sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -30,7 +31,7 @@
 
         .text h1 {
             margin: 0;
-            font-size: 4em;
+            font-size: 3.5em;
         }
 
         text h2 {
@@ -50,7 +51,7 @@
             margin-right: 10px;
         }
 
-        contact-info a:hover {
+        .contact-info a:hover {
             color: inherit;
         }
 
@@ -79,22 +80,32 @@
 <body>
     <div class="container">
         <div class="text">
-            <h1>Hi, I'm Julian</h1>
+            <h1 style="line-height: 1.5;">Hi,<br>I'm Julian</h1>
+            <p style="line-height: 1.5"> I'm currently a freshman at Virginia Tech, majoring in FinTech and <br>
+                Big Data Analytics. I'm also a software development intern at APVI, <br>
+                where I am helping improve efficiency through the automation of <br>
+                company processes. When I'm not in class or coding, you can <br>
+                find me watching football, reading, or playing volleyball.</p>
             <h2>Get in Touch</h2>
             <div class="contact.info">
+                <p>Email: julian.g.tapia@gmail.com</p>
                 <p>Phone: (202) 336-9836</p>
-                <p>Email: <a href="mailto:julian.g.tapia@gmail.com">julian.g.tapia@gmail.com</a></p>
                 <a href="https://www.linkedin.com/in/julian-g-tapia/" target="_blank" class="linkedin-icon">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" class="social-icon">
                 </a>
                 <a href="https://github.com/JulianT226" target="_blank">
                     <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="social-icon">
                 </a>
+                <p><a href="docs/Julian_Tapia_Resume_(testing).pdf">Download my Resume</a></p>
             </div>
         </div>
         <div class="picture">
             <img src="https://storageforjules.blob.core.windows.net/containerforjules/profile_pic.jpg" alt="Julian Tapia">
         </div>
+    </div>
+    <div class="resume-container">
+        <h2>My Resume</h2>
+        <iframe src="docs/Julian_Tapia_Resume_(testing).pdf" width="100%" height="600px"></iframe>
     </div>
 </body>
 </html>
