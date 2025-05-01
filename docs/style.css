@@ -150,3 +150,36 @@ iframe, embed {
 body{ padding-top:80px; }
 
 .container{ margin-top:40px; }   /* keeps the centered panel below the header */
+
+
+/* ----  No page scroll  ---- */
+html, body{
+  height:100%;
+  overflow:hidden;      /* kill the scrollbar */
+}
+
+/* Keep the card below the fixed header & guarantee it fits */
+.container{
+  max-height:calc(100vh - 120px);   /* 80-px header + a little margin  */
+}
+
+/* ----  Header “Resume” button styling  ---- */
+.button-outline{
+  padding:6px 16px;
+  border:2px solid #0077b5;
+  border-radius:5px;
+  font-weight:600;
+  color:#0077b5;
+  text-decoration:none;
+  transition:background .25s ease;
+}
+.button-outline:hover{
+  background:#0077b5;
+  color:#fff;
+}
+
+/* Ensure icons in the header keep their size */
+.nav-links .social-icon{
+  width:32px;
+  height:32px;
+}
