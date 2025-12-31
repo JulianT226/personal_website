@@ -31,12 +31,18 @@ body {
 }
 
 /* Layout */
-body>header,
+/* Layout */
 body>main,
 body>footer,
 .wrapper {
   max-width: var(--max-width);
   margin: 0 auto;
+  padding: 0 var(--spacing-unit);
+}
+
+/* Header allowed to stretch, but keep padding */
+body>header {
+  width: 100%;
   padding: 0 var(--spacing-unit);
 }
 
