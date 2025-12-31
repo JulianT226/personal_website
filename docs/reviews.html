@@ -15,12 +15,22 @@
         <h1>Book Reviews</h1>
         <p class="lead">A running list of books I've read.</p>
 
-        <div class="review-list">
+        <div class="sort-controls">
+            <span class="sort-label">Sort by:</span>
+            <button class="sort-btn active" onclick="sortReviews('newest')">Newest</button>
+            <button class="sort-btn" onclick="sortReviews('highest')">Highest Rated</button>
+            <button class="sort-btn" onclick="sortReviews('lowest')">Lowest Rated</button>
+        </div>
 
-            <div class="review-item">
+        <div class="review-list" id="reviewList">
+
+            <div class="review-item" data-rating="5">
                 <div class="review-header">
-                    <h2 class="review-title">Thinking, Fast and Slow</h2>
-                    <span class="review-author">by Daniel Kahneman</span>
+                    <div>
+                        <h2 class="review-title">Thinking, Fast and Slow</h2>
+                        <span class="review-author">by Daniel Kahneman</span>
+                    </div>
+                    <span class="review-date">Dec 31, 2025</span>
                 </div>
                 <div class="review-rating" aria-label="5 out of 5 stars">★★★★★</div>
                 <div class="review-body">
@@ -42,12 +52,15 @@
                 </div>
             </div>
 
-            <div class="review-item">
+            <div class="review-item" data-rating="5">
                 <div class="review-header">
-                    <h2 class="review-title">The Boys of My Youth</h2>
-                    <span class="review-author">by Jo Ann Beard</span>
+                    <div>
+                        <h2 class="review-title">The Boys of My Youth</h2>
+                        <span class="review-author">by Jo Ann Beard</span>
+                    </div>
+                    <span class="review-date">Dec 26, 2025</span>
                 </div>
-                <div class="review-rating" aria-label="4 out of 5 stars">★★★★★</div>
+                <div class="review-rating" aria-label="5 out of 5 stars">★★★★★</div>
                 <div class="review-body">
                     <p>There was a page where I thought that Brad, Jo Ann's younger brother, was her father. And in a
                         way, the children did raise their dad. Their alcoholic, deadbeat father. There's something
@@ -62,10 +75,13 @@
                 </div>
             </div>
 
-            <div class="review-item">
+            <div class="review-item" data-rating="4">
                 <div class="review-header">
-                    <h2 class="review-title">Skipping Christmas</h2>
-                    <span class="review-author">by John Grisham</span>
+                    <div>
+                        <h2 class="review-title">Skipping Christmas</h2>
+                        <span class="review-author">by John Grisham</span>
+                    </div>
+                    <span class="review-date">Dec 22, 2025</span>
                 </div>
                 <div class="review-rating" aria-label="4 out of 5 stars">★★★★☆</div>
                 <div class="review-body">
@@ -77,10 +93,13 @@
                 </div>
             </div>
 
-            <div class="review-item">
+            <div class="review-item" data-rating="5">
                 <div class="review-header">
-                    <h2 class="review-title">A Man Called Ove</h2>
-                    <span class="review-author">by Fredrik Backman</span>
+                    <div>
+                        <h2 class="review-title">A Man Called Ove</h2>
+                        <span class="review-author">by Fredrik Backman</span>
+                    </div>
+                    <span class="review-date">Nov 29, 2025</span>
                 </div>
                 <div class="review-rating" aria-label="5 out of 5 stars">★★★★★</div>
                 <div class="review-body">
@@ -92,10 +111,13 @@
                 </div>
             </div>
 
-            <div class="review-item">
+            <div class="review-item" data-rating="4">
                 <div class="review-header">
-                    <h2 class="review-title">The Great Gatsby</h2>
-                    <span class="review-author">by F. Scott Fitzgerald</span>
+                    <div>
+                        <h2 class="review-title">The Great Gatsby</h2>
+                        <span class="review-author">by F. Scott Fitzgerald</span>
+                    </div>
+                    <span class="review-date">Sep 2025</span>
                 </div>
                 <div class="review-rating" aria-label="4 out of 5 stars">★★★★☆</div>
                 <div class="review-body">
@@ -110,10 +132,13 @@
                 </div>
             </div>
 
-            <div class="review-item">
+            <div class="review-item" data-rating="3">
                 <div class="review-header">
-                    <h2 class="review-title">Where the Crawdads Sing</h2>
-                    <span class="review-author">by Delia Owens</span>
+                    <div>
+                        <h2 class="review-title">Where the Crawdads Sing</h2>
+                        <span class="review-author">by Delia Owens</span>
+                    </div>
+                    <span class="review-date">Aug 22, 2025</span>
                 </div>
                 <div class="review-rating" aria-label="3 out of 5 stars">★★★☆☆</div>
                 <div class="review-body">
@@ -129,10 +154,13 @@
                 </div>
             </div>
 
-            <div class="review-item">
+            <div class="review-item" data-rating="3">
                 <div class="review-header">
-                    <h2 class="review-title">Narrative and Numbers: The Value of Stories in Business</h2>
-                    <span class="review-author">by Aswath Damodaran</span>
+                    <div>
+                        <h2 class="review-title">Narrative and Numbers: The Value of Stories in Business</h2>
+                        <span class="review-author">by Aswath Damodaran</span>
+                    </div>
+                    <span class="review-date">Aug 14, 2025</span>
                 </div>
                 <div class="review-rating" aria-label="3 out of 5 stars">★★★☆☆</div>
                 <div class="review-body">
@@ -149,10 +177,13 @@
                 </div>
             </div>
 
-            <div class="review-item">
+            <div class="review-item" data-rating="4">
                 <div class="review-header">
-                    <h2 class="review-title">The Girl on the Train</h2>
-                    <span class="review-author">by Paula Hawkins</span>
+                    <div>
+                        <h2 class="review-title">The Girl on the Train</h2>
+                        <span class="review-author">by Paula Hawkins</span>
+                    </div>
+                    <span class="review-date">Aug 08, 2025</span>
                 </div>
                 <div class="review-rating" aria-label="4 out of 5 stars">★★★★☆</div>
                 <div class="review-body">
@@ -162,10 +193,13 @@
                 </div>
             </div>
 
-            <div class="review-item">
+            <div class="review-item" data-rating="5">
                 <div class="review-header">
-                    <h2 class="review-title">Chasing the Scream: The First and Last Days of the War on Drugs</h2>
-                    <span class="review-author">by Johann Hari</span>
+                    <div>
+                        <h2 class="review-title">Chasing the Scream: The First and Last Days of the War on Drugs</h2>
+                        <span class="review-author">by Johann Hari</span>
+                    </div>
+                    <span class="review-date">Aug 03, 2025</span>
                 </div>
                 <div class="review-rating" aria-label="5 out of 5 stars">★★★★★</div>
                 <div class="review-body">
@@ -181,10 +215,13 @@
                 </div>
             </div>
 
-            <div class="review-item">
+            <div class="review-item" data-rating="4">
                 <div class="review-header">
-                    <h2 class="review-title">All the Light We Cannot See</h2>
-                    <span class="review-author">by Anthony Doerr</span>
+                    <div>
+                        <h2 class="review-title">All the Light We Cannot See</h2>
+                        <span class="review-author">by Anthony Doerr</span>
+                    </div>
+                    <span class="review-date">Jul 25, 2025</span>
                 </div>
                 <div class="review-rating" aria-label="4 out of 5 stars">★★★★☆</div>
                 <div class="review-body">
@@ -199,10 +236,13 @@
                 </div>
             </div>
 
-            <div class="review-item">
+            <div class="review-item" data-rating="4">
                 <div class="review-header">
-                    <h2 class="review-title">Candide</h2>
-                    <span class="review-author">by Voltaire</span>
+                    <div>
+                        <h2 class="review-title">Candide</h2>
+                        <span class="review-author">by Voltaire</span>
+                    </div>
+                    <span class="review-date">Jul 24, 2025</span>
                 </div>
                 <div class="review-rating" aria-label="4 out of 5 stars">★★★★☆</div>
                 <div class="review-body">
@@ -221,11 +261,14 @@
                 </div>
             </div>
 
-            <div class="review-item">
+            <div class="review-item" data-rating="5">
                 <div class="review-header">
-                    <h2 class="review-title">After the Music Stopped: The Financial Crisis, the Response, and the Work
-                        Ahead</h2>
-                    <span class="review-author">by Alan S. Blinder</span>
+                    <div>
+                        <h2 class="review-title">After the Music Stopped: The Financial Crisis, the Response, and the
+                            Work Ahead</h2>
+                        <span class="review-author">by Alan S. Blinder</span>
+                    </div>
+                    <span class="review-date">Jul 17, 2025</span>
                 </div>
                 <div class="review-rating" aria-label="5 out of 5 stars">★★★★★</div>
                 <div class="review-body">
@@ -249,10 +292,13 @@
                 </div>
             </div>
 
-            <div class="review-item">
+            <div class="review-item" data-rating="2">
                 <div class="review-header">
-                    <h2 class="review-title">The Four Agreements: A Practical Guide to Personal Freedom</h2>
-                    <span class="review-author">by Miguel Ruiz</span>
+                    <div>
+                        <h2 class="review-title">The Four Agreements: A Practical Guide to Personal Freedom</h2>
+                        <span class="review-author">by Miguel Ruiz</span>
+                    </div>
+                    <span class="review-date">Jul 15, 2025</span>
                 </div>
                 <div class="review-rating" aria-label="2 out of 5 stars">★★☆☆☆</div>
                 <div class="review-body">
@@ -263,10 +309,13 @@
                 </div>
             </div>
 
-            <div class="review-item">
+            <div class="review-item" data-rating="3">
                 <div class="review-header">
-                    <h2 class="review-title">Drowning</h2>
-                    <span class="review-author">by T.J. Newman</span>
+                    <div>
+                        <h2 class="review-title">Drowning</h2>
+                        <span class="review-author">by T.J. Newman</span>
+                    </div>
+                    <span class="review-date">Jul 09, 2025</span>
                 </div>
                 <div class="review-rating" aria-label="3 out of 5 stars">★★★☆☆</div>
                 <div class="review-body">
@@ -278,10 +327,13 @@
                 </div>
             </div>
 
-            <div class="review-item">
+            <div class="review-item" data-rating="4">
                 <div class="review-header">
-                    <h2 class="review-title">Troubled: A Memoir of Foster Care, Family, and Social Class</h2>
-                    <span class="review-author">by Rob Henderson</span>
+                    <div>
+                        <h2 class="review-title">Troubled: A Memoir of Foster Care, Family, and Social Class</h2>
+                        <span class="review-author">by Rob Henderson</span>
+                    </div>
+                    <span class="review-date">Jul 05, 2025</span>
                 </div>
                 <div class="review-rating" aria-label="4 out of 5 stars">★★★★☆</div>
                 <div class="review-body">
@@ -300,10 +352,13 @@
                 </div>
             </div>
 
-            <div class="review-item">
+            <div class="review-item" data-rating="5">
                 <div class="review-header">
-                    <h2 class="review-title">To Kill a Mockingbird</h2>
-                    <span class="review-author">by Harper Lee</span>
+                    <div>
+                        <h2 class="review-title">To Kill a Mockingbird</h2>
+                        <span class="review-author">by Harper Lee</span>
+                    </div>
+                    <span class="review-date">Jun 28, 2025</span>
                 </div>
                 <div class="review-rating" aria-label="5 out of 5 stars">★★★★★</div>
                 <div class="review-body">
@@ -316,10 +371,13 @@
                 </div>
             </div>
 
-            <div class="review-item">
+            <div class="review-item" data-rating="4">
                 <div class="review-header">
-                    <h2 class="review-title">The Round House</h2>
-                    <span class="review-author">by Louise Erdrich</span>
+                    <div>
+                        <h2 class="review-title">The Round House</h2>
+                        <span class="review-author">by Louise Erdrich</span>
+                    </div>
+                    <span class="review-date">Jun 22, 2025</span>
                 </div>
                 <div class="review-rating" aria-label="4 out of 5 stars">★★★★☆</div>
                 <div class="review-body">
@@ -332,10 +390,13 @@
                 </div>
             </div>
 
-            <div class="review-item">
+            <div class="review-item" data-rating="5">
                 <div class="review-header">
-                    <h2 class="review-title">Hillbilly Elegy: A Memoir of a Family and Culture in Crisis</h2>
-                    <span class="review-author">by J.D. Vance</span>
+                    <div>
+                        <h2 class="review-title">Hillbilly Elegy: A Memoir of a Family and Culture in Crisis</h2>
+                        <span class="review-author">by J.D. Vance</span>
+                    </div>
+                    <span class="review-date">Jun 15, 2025</span>
                 </div>
                 <div class="review-rating" aria-label="5 out of 5 stars">★★★★★</div>
                 <div class="review-body">
@@ -347,10 +408,13 @@
                 </div>
             </div>
 
-            <div class="review-item">
+            <div class="review-item" data-rating="3">
                 <div class="review-header">
-                    <h2 class="review-title">The Bridges of Madison County</h2>
-                    <span class="review-author">by Robert James Waller</span>
+                    <div>
+                        <h2 class="review-title">The Bridges of Madison County</h2>
+                        <span class="review-author">by Robert James Waller</span>
+                    </div>
+                    <span class="review-date">Jun 12, 2025</span>
                 </div>
                 <div class="review-rating" aria-label="3 out of 5 stars">★★★☆☆</div>
                 <div class="review-body">
@@ -362,10 +426,13 @@
                 </div>
             </div>
 
-            <div class="review-item">
+            <div class="review-item" data-rating="2">
                 <div class="review-header">
-                    <h2 class="review-title">25 Alive (Women’s Murder Club #25)</h2>
-                    <span class="review-author">by James Patterson</span>
+                    <div>
+                        <h2 class="review-title">25 Alive (Women’s Murder Club #25)</h2>
+                        <span class="review-author">by James Patterson</span>
+                    </div>
+                    <span class="review-date">Jun 11, 2025</span>
                 </div>
                 <div class="review-rating" aria-label="2 out of 5 stars">★★☆☆☆</div>
                 <div class="review-body">
@@ -375,10 +442,13 @@
                 </div>
             </div>
 
-            <div class="review-item">
+            <div class="review-item" data-rating="5">
                 <div class="review-header">
-                    <h2 class="review-title">Sycamore Row (Jake Brigance, #2)</h2>
-                    <span class="review-author">by John Grisham</span>
+                    <div>
+                        <h2 class="review-title">Sycamore Row (Jake Brigance, #2)</h2>
+                        <span class="review-author">by John Grisham</span>
+                    </div>
+                    <span class="review-date">Jun 08, 2025</span>
                 </div>
                 <div class="review-rating" aria-label="5 out of 5 stars">★★★★★</div>
                 <div class="review-body">
@@ -389,10 +459,13 @@
                 </div>
             </div>
 
-            <div class="review-item">
+            <div class="review-item" data-rating="5">
                 <div class="review-header">
-                    <h2 class="review-title">Steve Jobs</h2>
-                    <span class="review-author">by Walter Isaacson</span>
+                    <div>
+                        <h2 class="review-title">Steve Jobs</h2>
+                        <span class="review-author">by Walter Isaacson</span>
+                    </div>
+                    <span class="review-date">May 2025</span>
                 </div>
                 <div class="review-rating" aria-label="5 out of 5 stars">★★★★★</div>
                 <div class="review-body">
@@ -413,6 +486,36 @@
         fetch('header.html')
             .then(r => r.text())
             .then(h => document.body.insertAdjacentHTML('afterbegin', h));
+
+        // Sorting Logic
+        const reviewList = document.getElementById('reviewList');
+        // Store original order
+        const originalReviews = Array.from(reviewList.children);
+
+        function sortReviews(criterion) {
+            let sortedReviews = Array.from(reviewList.children);
+
+            if (criterion === 'newest') {
+                // Restore original order (assuming provided list was Newest first)
+                sortedReviews = [...originalReviews];
+            } else if (criterion === 'highest') {
+                sortedReviews.sort((a, b) => {
+                    return b.getAttribute('data-rating') - a.getAttribute('data-rating');
+                });
+            } else if (criterion === 'lowest') {
+                sortedReviews.sort((a, b) => {
+                    return a.getAttribute('data-rating') - b.getAttribute('data-rating');
+                });
+            }
+
+            // Update DOM
+            reviewList.innerHTML = '';
+            sortedReviews.forEach(item => reviewList.appendChild(item));
+
+            // Update active button state
+            document.querySelectorAll('.sort-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
     </script>
 </body>
 
