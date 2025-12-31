@@ -11,29 +11,30 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="text">
-            <h1 style="line-height: 1.5;">Hi,<br>I'm Julian</h1>
-            <p style="line-height: 1.5">I'm a sophomore at Virginia Tech pursuing a B.S. in Industrial & Systems
-                Engineering
-                with a minor in Economics.<br><br>
 
-                When I'm not in class, you can find me watching football, reading, collecting used books, making coffee,
-                perfecting my pizza recipe, or listening to Gracie Abrams!</p>
-            <br>
-            <h2>Get in Touch!</h2>
-            <div class="contact-info">
-                <p>Email: jtapia@vt.edu</p>
-                <p>Phone: (202) 336-9836</p>
-            </div>
-        </div>
-        <div class="picture">
+    <main>
+        <section class="profile-intro">
             <img src="https://storageforjules.blob.core.windows.net/containerforjules/profile_pic.jpg"
-                alt="Julian Tapia">
-        </div>
-    </div>
+                alt="Julian Tapia" class="profile-image">
+
+            <h1>Hi, I'm Julian.</h1>
+            <p class="lead">I'm a sophomore at Virginia Tech pursuing a B.S. in Industrial & Systems Engineering with a
+                minor in Economics.</p>
+
+            <p>When I'm not in class, you can find me watching football, reading, collecting used books, making coffee,
+                perfecting my pizza recipe, or listening to Gracie Abrams!</p>
+        </section>
+
+        <section class="contact-section">
+            <h2>Get in Touch</h2>
+            <div class="contact-list">
+                <p><strong>Email:</strong> <a href="mailto:jtapia@vt.edu">jtapia@vt.edu</a></p>
+                <p><strong>Phone:</strong> (202) 336-9836</p>
+            </div>
+        </section>
+    </main>
+
     <script>
-        /* Load the shared header once, then prepend it to the page */
         fetch('header.html')
             .then(r => r.text())
             .then(h => document.body.insertAdjacentHTML('afterbegin', h));

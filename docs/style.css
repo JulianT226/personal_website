@@ -1,373 +1,226 @@
-body {
-  font-family: "Roboto", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background-color: #f4f4f4;
-  flex-direction: column;
+/* refined-style.css - Simple & Lightweight Redesign */
+
+:root {
+  /* Palette */
+  --bg-color: #ffffff;
+  --text-color: #111111;
+  --text-light: #555555;
+  --accent-color: #0066cc;
+  --link-hover: #004499;
+  --border-color: #eaeaea;
+
+  /* Spacing */
+  --spacing-unit: 1rem;
+  --max-width: 700px;
 }
 
-.container {
-  display: flex;
-  align-items: center;
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.text {
-  margin-right: 20px;
-}
-
-.text h1 {
-  margin: 0;
-  font-size: 3.5em;
-}
-
-.text h2 {
-  margin: 15px 0 10px 0;
-  font-size: 2em;
-  color: #333;
-}
-
-.contact-info {
-  font-size: 1em;
-  line-height: 1.6em;
-}
-
-.contact-info a {
-  text-decoration: none;
-  color: inherit;
-  margin-right: 10px;
-}
-
-.contact-info a:hover {
-  color: inherit;
-}
-
-.contact-info img {
-  width: 32px;
-  height: 32px;
-  vertical-align: middle;
-}
-
-.linkedin-icon {
-  margin-right: 15px;
-}
-
-.picture img {
-  border-radius: 10px;
-  width: 400px;
-  height: 400px;
-}
-
-.social-icon {
-  width: 35px;
-  height: 35px;
-  vertical-align: middle;
-}
-
-.resume-button {
-  display: block;
-  margin-bottom: 20px;
-  padding: 10px 20px;
-  background-color: #0077b5;
-  color: white !important;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 1.2em;
-  transition: background-color 0.3s ease;
-  max-width: 110px;
-  text-align: center;
-}
-
-.resume-button:hover {
-  background-color: #005582;
-}
-
-.resume-container {
-  width: 80%;
-  max-width: 800px;
-  padding: 20px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding-top: 30px;
+/* Base Reset */
+* {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.resume-container h1 {
-  text-align: center;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  padding: var(--spacing-unit);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+body>header,
+body>main,
+body>footer,
+.wrapper {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-unit);
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
+}
+
+h1 {
   font-size: 2em;
-  margin-bottom: 20px;
+  letter-spacing: -0.5px;
 }
 
-iframe,
-embed {
-  width: 100%;
-  height: 900px;
-  border: none;
+h2 {
+  font-size: 1.5em;
+  letter-spacing: -0.3px;
+  margin-top: 2rem;
 }
 
-.back-button {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #0077b5;
-  color: white;
+p {
+  margin-bottom: 1.2rem;
+  max-width: 65ch;
+}
+
+/* Optimal reading length */
+
+a {
+  color: var(--accent-color);
   text-decoration: none;
-  border-radius: 5px;
-  font-size: 1em;
-  transition: background-color 0.3s ease;
+  transition: color 0.1s ease;
 }
 
-.back-button:hover {
-  background-color: #005582;
+a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
 }
 
-
-/* ----------  Fixed site-wide header  ---------- */
+/* Header & Navigation */
 .site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 40px;
-  z-index: 1000;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  margin-bottom: 2rem;
+  /* No fixed position, flows naturally */
 }
 
 .logo {
-  font-size: 1.5em;
   font-weight: 700;
-  color: #333;
+  font-size: 1.2em;
+  color: var(--text-color);
+}
+
+.logo:hover {
   text-decoration: none;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
+  gap: 1.5rem;
 }
 
 .nav-item {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #333;
+  font-size: 0.95em;
+  color: var(--text-light);
   font-weight: 500;
-  font-size: 1.1em;
-  /* Make text links slightly larger/readable */
 }
 
 .nav-item:hover {
-  color: #0077b5;
+  color: var(--accent-color);
 }
 
-.social-link {
-  margin-left: 15px;
+.social-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  opacity: 0.8;
 }
 
-/* Slightly closer grouping for icons */
-
-/* Ensure page content clears the fixed header */
-body {
-  padding-top: 80px;
+.social-link:hover .social-icon {
+  opacity: 1;
 }
 
-.container {
-  margin-top: 40px;
+
+/* Main Content Areas */
+main {
+  margin-bottom: 4rem;
 }
 
-/* keeps the centered panel below the header */
-
-
-/* ----  No page scroll (Desktop only implied by original design, but modifying for responsiveness) ---- */
-html,
-body {
-  height: 100%;
-  /* overflow: hidden;  <-- REMOVED to allow scrolling on small screens */
-  overflow-x: hidden;
-  /* Prevent horizontal scroll only */
+/* Profile Section (Home) */
+.profile-intro {
+  padding: 2rem 0;
 }
 
-/* Keep the card below the fixed header & guarantee it fits on large screens */
-.container {
-  /* max-height: calc(100vh - 120px);  <-- REMOVED to allow container to grow */
-  width: 90%;
-  max-width: 900px;
+.profile-intro h1 {
+  margin-bottom: 1rem;
 }
 
-/* ----  Header “Resume” button styling  ---- */
-/* Removed unused button-outline styles */
-
-/* Ensure icons in the header keep their size */
-.nav-links .social-icon {
-  width: 32px;
-  height: 32px;
-}
-
-/* ---------- Mobile Responsiveness ---------- */
-@media screen and (max-width: 768px) {
-
-  /* Allow body to scroll naturally */
-  body {
-    height: auto;
-    padding-top: 100px;
-    /* More space for header on mobile if needed */
-  }
-
-  /* Compact Header for Mobile */
-  .site-header {
-    padding: 10px 15px;
-    /* Reduce side padding from 40px to 15px */
-    flex-wrap: wrap;
-    /* Allow wrapping if needed */
-  }
-
-  .nav-item {
-    margin-left: 10px;
-    /* Reduce spacing from 20px */
-    font-size: 1em;
-    /* return to base size if needed */
-  }
-
-  .logo {
-    font-size: 1.2em;
-    /* Slightly smaller logo */
-  }
-
-  /* Stack content vertically */
-  .container {
-    flex-direction: column;
-    text-align: center;
-    margin-top: 20px;
-    padding: 30px 20px;
-  }
-
-  /* Adjust text section */
-  .text {
-    margin-right: 0;
-    margin-bottom: 30px;
-  }
-
-  .text h1 {
-    font-size: 2.5em;
-    /* Smaller phone heading */
-  }
-
-  /* Image scaling */
-  .picture img {
-    width: 100%;
-    max-width: 300px;
-    /* Limit size on mobile */
-    height: auto;
-  }
-
-  /* Resume Page Adjustments */
-  .resume-container {
-    padding-top: 80px;
-    width: 95%;
-  }
-
-  iframe,
-  embed {
-    height: 500px;
-    /* Smaller PDF viewer on mobile */
-  }
-
-  iframe,
-  embed {
-    height: 500px;
-    /* Smaller PDF viewer on mobile */
-  }
-}
-
-/* ---------- Essays Feature ---------- */
-
-.essay-container,
-.essay-content-container {
-  flex-direction: column;
-  align-items: flex-start;
-  /* Align text to left primarily */
-  width: 85%;
-  max-width: 800px;
-  margin: 40px auto;
-  /* Center on page */
-}
-
-/* Ensure container scrolls correctly if content is long */
-.container {
-  overflow-y: auto;
-}
-
-.essay-intro {
+.profile-intro p.lead {
   font-size: 1.2em;
-  color: #666;
-  margin-bottom: 30px;
+  color: var(--text-light);
+  margin-bottom: 2rem;
 }
 
-.essay-list {
+.profile-image {
   width: 100%;
+  max-width: 150px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+  display: block;
+}
+
+/* Contact List */
+.contact-list p {
+  margin-bottom: 0.5rem;
+}
+
+/* Essays Index */
+.essay-list {
+  list-style: none;
+  margin-top: 1rem;
 }
 
 .essay-item {
-  border-bottom: 1px solid #eee;
-  padding: 20px 0;
-}
-
-.essay-item:last-child {
-  border-bottom: none;
-}
-
-.essay-title {
-  font-size: 1.5em;
-  font-weight: 700;
-  color: #333;
-  text-decoration: none;
+  margin-bottom: 2rem;
   display: block;
-  margin-bottom: 5px;
 }
 
-.essay-title:hover {
-  color: #0077b5;
-}
-
-.essay-date {
-  font-size: 0.9em;
-  color: #888;
+.essay-meta {
+  font-size: 0.85em;
+  color: var(--text-light);
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 0.3rem;
 }
 
-.essay-summary {
-  color: #555;
-  line-height: 1.5;
+.essay-link {
+  font-size: 1.3em;
+  font-weight: 600;
+  color: var(--text-color);
+  display: block;
 }
 
-.essay-article {
-  width: 100%;
-  line-height: 1.8;
-  font-size: 1.1em;
-  color: #333;
+.essay-link:hover {
+  color: var(--accent-color);
 }
 
-.essay-article hr {
-  border: 0;
-  border-top: 1px solid #eee;
-  margin: 20px 0;
+.essay-excerpt {
+  color: var(--text-light);
+  margin-top: 0.5rem;
+  font-size: 0.95em;
 }
 
-.essay-article p {
-  margin-bottom: 20px;
+/* Essay Article */
+.article-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.article-body {
+  font-size: 1.05em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 1.5rem;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
 }
