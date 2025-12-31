@@ -291,6 +291,8 @@ main {
   margin-left: 0.5rem;
   font-size: 1em;
   font-weight: 400;
+  display: inline-block;
+  /* Keeps "by Author" as one unit */
 }
 
 .review-date {
