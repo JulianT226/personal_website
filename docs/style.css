@@ -307,6 +307,36 @@ main {
   font-size: 1.1em;
 }
 
+.star-half {
+  position: relative;
+  display: inline-block;
+  color: #eaeaea;
+  /* Empty star color, effectively gray */
+}
+
+/* Ensure the base 'empty' star is visible if needed, 
+   but typically we use an empty star character. 
+   If using '☆', its own color should valid.
+   Let's inherit color for simplicity but overlay with yellow. */
+.star-half {
+  color: #f1c40f;
+  /* Make the base outline star yellow too? No, usually empty stars are gray or outline. 
+     Wait, the current design uses filled stars `★` and implied empty ones? 
+     The current design lists stars like `★★★★☆`. 
+     The `review-rating` color is yellow. So `☆` is also yellow.
+     That's fine. */
+}
+
+.star-half::after {
+  content: '★';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  overflow: hidden;
+  color: #f1c40f;
+}
+
 .review-body p {
   margin-bottom: 0;
 }
