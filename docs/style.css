@@ -63,11 +63,13 @@ body {
   width: 400px;
   height: 400px;
 }
+
 .social-icon {
   width: 35px;
   height: 35px;
   vertical-align: middle;
 }
+
 .resume-button {
   display: block;
   margin-bottom: 20px;
@@ -81,6 +83,7 @@ body {
   max-width: 110px;
   text-align: center;
 }
+
 .resume-button:hover {
   background-color: #005582;
 }
@@ -107,7 +110,8 @@ body {
   margin-bottom: 20px;
 }
 
-iframe, embed {
+iframe,
+embed {
   width: 100%;
   height: 900px;
   border: none;
@@ -131,32 +135,70 @@ iframe, embed {
 
 
 /* ----------  Fixed site-wide header  ---------- */
-.site-header{
-  position:fixed; top:0; left:0; width:100%;
-  background:#fff;
-  box-shadow:0 2px 4px rgba(0,0,0,.1);
-  display:flex; justify-content:space-between; align-items:center;
-  padding:10px 40px; z-index:1000;
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  z-index: 1000;
 }
 
-.logo{ font-size:1.5em; font-weight:700; color:#333; text-decoration:none; }
+.logo {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #333;
+  text-decoration: none;
+}
 
-.nav-links{ display:flex; align-items:center; }
+.nav-links {
+  display: flex;
+  align-items: center;
+}
 
-.nav-item{ margin-left:20px; text-decoration:none; color:#333; font-weight:500; }
-.nav-item:hover{ color:#0077b5; }
+.nav-item {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.1em;
+  /* Make text links slightly larger/readable */
+}
+
+.nav-item:hover {
+  color: #0077b5;
+}
+
+.social-link {
+  margin-left: 15px;
+}
+
+/* Slightly closer grouping for icons */
 
 /* Ensure page content clears the fixed header */
-body{ padding-top:80px; }
+body {
+  padding-top: 80px;
+}
 
-.container{ margin-top:40px; }   /* keeps the centered panel below the header */
+.container {
+  margin-top: 40px;
+}
+
+/* keeps the centered panel below the header */
 
 
 /* ----  No page scroll (Desktop only implied by original design, but modifying for responsiveness) ---- */
-html, body {
+html,
+body {
   height: 100%;
   /* overflow: hidden;  <-- REMOVED to allow scrolling on small screens */
-  overflow-x: hidden; /* Prevent horizontal scroll only */
+  overflow-x: hidden;
+  /* Prevent horizontal scroll only */
 }
 
 /* Keep the card below the fixed header & guarantee it fits on large screens */
@@ -167,32 +209,42 @@ html, body {
 }
 
 /* ----  Header “Resume” button styling  ---- */
-.button-outline{
-  padding:6px 16px;
-  border:2px solid #0077b5;
-  border-radius:5px;
-  font-weight:600;
-  color:#0077b5;
-  text-decoration:none;
-  transition:background .25s ease;
-}
-.button-outline:hover{
-  background:#0077b5;
-  color:#fff;
-}
+/* Removed unused button-outline styles */
 
 /* Ensure icons in the header keep their size */
-.nav-links .social-icon{
-  width:32px;
-  height:32px;
+.nav-links .social-icon {
+  width: 32px;
+  height: 32px;
 }
 
 /* ---------- Mobile Responsiveness ---------- */
 @media screen and (max-width: 768px) {
+
   /* Allow body to scroll naturally */
   body {
     height: auto;
-    padding-top: 100px; /* More space for header on mobile if needed */
+    padding-top: 100px;
+    /* More space for header on mobile if needed */
+  }
+
+  /* Compact Header for Mobile */
+  .site-header {
+    padding: 10px 15px;
+    /* Reduce side padding from 40px to 15px */
+    flex-wrap: wrap;
+    /* Allow wrapping if needed */
+  }
+
+  .nav-item {
+    margin-left: 10px;
+    /* Reduce spacing from 20px */
+    font-size: 1em;
+    /* return to base size if needed */
+  }
+
+  .logo {
+    font-size: 1.2em;
+    /* Slightly smaller logo */
   }
 
   /* Stack content vertically */
@@ -210,13 +262,15 @@ html, body {
   }
 
   .text h1 {
-    font-size: 2.5em; /* Smaller phone heading */
+    font-size: 2.5em;
+    /* Smaller phone heading */
   }
 
   /* Image scaling */
   .picture img {
     width: 100%;
-    max-width: 300px; /* Limit size on mobile */
+    max-width: 300px;
+    /* Limit size on mobile */
     height: auto;
   }
 
@@ -225,8 +279,10 @@ html, body {
     padding-top: 80px;
     width: 95%;
   }
-  
-  iframe, embed {
-    height: 500px; /* Smaller PDF viewer on mobile */
+
+  iframe,
+  embed {
+    height: 500px;
+    /* Smaller PDF viewer on mobile */
   }
 }
