@@ -285,4 +285,89 @@ body {
     height: 500px;
     /* Smaller PDF viewer on mobile */
   }
+
+  iframe,
+  embed {
+    height: 500px;
+    /* Smaller PDF viewer on mobile */
+  }
+}
+
+/* ---------- Essays Feature ---------- */
+
+.essay-container,
+.essay-content-container {
+  flex-direction: column;
+  align-items: flex-start;
+  /* Align text to left primarily */
+  width: 85%;
+  max-width: 800px;
+  margin: 40px auto;
+  /* Center on page */
+}
+
+/* Ensure container scrolls correctly if content is long */
+.container {
+  overflow-y: auto;
+}
+
+.essay-intro {
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.essay-list {
+  width: 100%;
+}
+
+.essay-item {
+  border-bottom: 1px solid #eee;
+  padding: 20px 0;
+}
+
+.essay-item:last-child {
+  border-bottom: none;
+}
+
+.essay-title {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #333;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.essay-title:hover {
+  color: #0077b5;
+}
+
+.essay-date {
+  font-size: 0.9em;
+  color: #888;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.essay-summary {
+  color: #555;
+  line-height: 1.5;
+}
+
+.essay-article {
+  width: 100%;
+  line-height: 1.8;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.essay-article hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+}
+
+.essay-article p {
+  margin-bottom: 20px;
 }

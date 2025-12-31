@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essays - Julian Tapia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://i.pinimg.com/originals/70/76/30/707630291745997f7d024c3fc609e8cf.png" />
+</head>
+
+<body>
+    <div class="container essay-container">
+        <h1>Essays</h1>
+        <p class="essay-intro">A collection of my thoughts on engineering, economics, and life.</p>
+
+        <div class="essay-list">
+            <div class="essay-item">
+                <a href="essay-1.html" class="essay-title">The Future of Industrial Engineering</a>
+                <span class="essay-date">December 30, 2025</span>
+                <p class="essay-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+
+            <div class="essay-item">
+                <a href="#" class="essay-title">Economics in the Digital Age</a>
+                <span class="essay-date">Coming Soon</span>
+                <p class="essay-summary">Detailed analysis coming soon. Stay tuned!</p>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-button">Back to Home</a>
+    </div>
+
+    <script>
+        /* Load the shared header once, then prepend it to the page */
+        fetch('header.html')
+            .then(r => r.text())
+            .then(h => document.body.insertAdjacentHTML('afterbegin', h));
+    </script>
+</body>
+
+</html>
