@@ -152,15 +152,18 @@ body{ padding-top:80px; }
 .container{ margin-top:40px; }   /* keeps the centered panel below the header */
 
 
-/* ----  No page scroll  ---- */
-html, body{
-  height:100%;
-  overflow:hidden;      /* kill the scrollbar */
+/* ----  No page scroll (Desktop only implied by original design, but modifying for responsiveness) ---- */
+html, body {
+  height: 100%;
+  /* overflow: hidden;  <-- REMOVED to allow scrolling on small screens */
+  overflow-x: hidden; /* Prevent horizontal scroll only */
 }
 
-/* Keep the card below the fixed header & guarantee it fits */
-.container{
-  max-height:calc(100vh - 120px);   /* 80-px header + a little margin  */
+/* Keep the card below the fixed header & guarantee it fits on large screens */
+.container {
+  /* max-height: calc(100vh - 120px);  <-- REMOVED to allow container to grow */
+  width: 90%;
+  max-width: 900px;
 }
 
 /* ----  Header “Resume” button styling  ---- */
@@ -182,4 +185,48 @@ html, body{
 .nav-links .social-icon{
   width:32px;
   height:32px;
+}
+
+/* ---------- Mobile Responsiveness ---------- */
+@media screen and (max-width: 768px) {
+  /* Allow body to scroll naturally */
+  body {
+    height: auto;
+    padding-top: 100px; /* More space for header on mobile if needed */
+  }
+
+  /* Stack content vertically */
+  .container {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+    padding: 30px 20px;
+  }
+
+  /* Adjust text section */
+  .text {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .text h1 {
+    font-size: 2.5em; /* Smaller phone heading */
+  }
+
+  /* Image scaling */
+  .picture img {
+    width: 100%;
+    max-width: 300px; /* Limit size on mobile */
+    height: auto;
+  }
+
+  /* Resume Page Adjustments */
+  .resume-container {
+    padding-top: 80px;
+    width: 95%;
+  }
+  
+  iframe, embed {
+    height: 500px; /* Smaller PDF viewer on mobile */
+  }
 }
