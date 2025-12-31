@@ -230,3 +230,44 @@ main {
     flex-wrap: wrap;
   }
 }
+
+/* Book Reviews */
+.review-item {
+  margin-bottom: 3rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 2rem;
+}
+
+.review-item:last-child {
+  border-bottom: none;
+}
+
+.review-header {
+  margin-bottom: 0.5rem;
+}
+
+.review-title {
+  display: inline-block;
+  margin: 0;
+  font-size: 1.3em;
+  color: var(--text-color);
+}
+
+.review-author {
+  color: var(--text-light);
+  margin-left: 0.5rem;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.review-rating {
+  color: #f1c40f;
+  /* Star yellow */
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  font-size: 1.1em;
+}
+
+.review-body p {
+  margin-bottom: 0;
+}

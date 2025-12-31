@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Reviews - Julian Tapia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://i.pinimg.com/originals/70/76/30/707630291745997f7d024c3fc609e8cf.png" />
+</head>
+
+<body>
+    <main>
+        <h1>Book Reviews</h1>
+        <p class="lead">A running list of books I've read and my thoughts on them.</p>
+
+        <div class="review-list">
+
+            <!-- COPY THIS BLOCK TO ADD A NEW REVIEW -->
+            <div class="review-item">
+                <div class="review-header">
+                    <h2 class="review-title">Example Book Title</h2>
+                    <span class="review-author">by Author Name</span>
+                </div>
+                <div class="review-rating" aria-label="4 out of 5 stars">★★★★☆</div>
+                <div class="review-body">
+                    <p>This is a placeholder review. Replace this text with your thoughts on the book. Keep it short and
+                        sweet!</p>
+                </div>
+            </div>
+            <!-- END OF REVIEW BLOCK -->
+
+            <div class="review-item">
+                <div class="review-header">
+                    <h2 class="review-title">Thinking, Fast and Slow</h2>
+                    <span class="review-author">by Daniel Kahneman</span>
+                </div>
+                <div class="review-rating" aria-label="5 out of 5 stars">★★★★★</div>
+                <div class="review-body">
+                    <p>A fundamental book on how our brains work. The distinction between System 1 and System 2 thinking
+                        changed how I make decisions.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="margin-top: 3rem;">
+            <a href="index.html">← Back to Home</a>
+        </div>
+    </main>
+
+    <script>
+        fetch('header.html')
+            .then(r => r.text())
+            .then(h => document.body.insertAdjacentHTML('afterbegin', h));
+    </script>
+</body>
+
+</html>
