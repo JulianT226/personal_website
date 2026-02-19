@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assorted Poems | Julian Tapia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://i.pinimg.com/originals/70/76/30/707630291745997f7d024c3fc609e8cf.png" />
+</head>
+
+<body>
+
+    <main>
+        <section class="profile-intro">
+            <h1>Assorted Poems</h1>
+            <p class="lead">A collection of my favorite poems.</p>
+        </section>
+
+        <section class="poems-list">
+            <!-- Example poem structure, user can add more -->
+            <article class="poem-item" style="margin-bottom: 3rem;">
+                <h3>The Red Wheelbarrow</h3>
+                <p class="poem-author">by William Carlos Williams</p>
+                <blockquote
+                    style="margin-top: 1rem; border-left: 3px solid var(--accent-color); padding-left: 1rem; font-style: italic;">
+                    so much depends<br>
+                    upon<br><br>
+                    a red wheel<br>
+                    barrow<br><br>
+                    glazed with rain<br>
+                    water<br><br>
+                    beside the white<br>
+                    chickens
+                </blockquote>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        fetch('header.html')
+            .then(r => r.text())
+            .then(h => document.body.insertAdjacentHTML('afterbegin', h));
+    </script>
+</body>
+
+</html>
