@@ -31,7 +31,6 @@ body {
 }
 
 /* Layout */
-/* Layout */
 body>main,
 body>footer,
 .wrapper {
@@ -333,6 +332,11 @@ main {
 
 .review-body p {
   margin-bottom: 0;
+}
+
+/* Back link */
+.back-link-wrap {
+  margin-top: 3rem;
 }
 
 /* Poetry Section */
